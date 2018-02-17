@@ -1,0 +1,12 @@
+
+Framework Use : MEAN stack
+Dependecies:Nodemon,Mongoose,Express,body-parser,Node-mailer
+Explaination:
+1)Created task folder which contains public folder where contact form is present
+2)Inorder to bind the html element with attributes I have use AngularJS framework.
+3)Created server with the help of express framework and moongoose to store data in the database
+4)For middleware I have use body-parser 
+5)Databse folder contains the User_schema where schema of response of user is build
+6)To send the details to the admin I have use Nodemailer package which send the response immediately after the data is store in the database
+7)The demo of the project is uploaded on youtube : https://www.youtube.com/watch?v=XQS8hcXBy-Q&feature=youtu.be
+8)The source code is also uploaded on github :https://github.com/Heet1996/Deevesoft-task

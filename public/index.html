@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<title>Contact Form</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="container" ng-app="contactForm">
+		<div class="row" ng-controller="ContactController" style="margin-top:4vh">
+			
+      <div class="col-md-8 col-md-offset-4">
+	<form method="post" accept-charset="utf-8" action="ContactForm">
+		<div class="form-group">
+			<label>what is your age group?</label><br>
+			
+			<div class="radio">
+    <label><input type="radio" value="<=25" name="A"><=25</label>
+    </div>
+    <div class="radio">
+      <label><input   type="radio" value="26-35" name="A">26-35</label>
+    </div>
+    <div class="radio">
+      <label><input  type="radio" value="36-50" name="A">36-50</label>
+    </div>
+    <div class="radio">
+      <label><input  type="radio" value=">50" name="A">>50</label>
+    </div>
+    
+		</div>
+		<div class="form-group">
+			<label>What is your gender?</label><br>
+			
+			<div class="radio">
+      <label><input type="radio"  value="Male" name="B">Male</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio"  value="Female" name="B">Female</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio"  value="Not to say" name="B">Prefer Not to Say</label>
+    </div>
+    <div class="radio">
+    	<label><input type="radio" value="{{gender}}" name="B">Other</label>
+      <input type="text" ng-model="gender" placeholder="Mention here...">
+    </div>			
+		</div>
+		<div class="form-group">
+			<label>How would you like your healthy life-style change care to be delivered?</label><br>
+			
+			<div class="radio">
+      <label><input type="radio" value="Mobile app" name="C">Mobile app</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="Personal instructor over a video call" name="C">Personal instructor over a video call</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="personal instructor in person" name="C">personal instructor in person</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="virtual group sessions" name="C">virtual group sessions</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="in-person group sessions" name="C">in-person group sessions</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="{{life_style}}" name="C">Other</label>
+      <input type="text" ng-model="life_style" placeholder="Mention here...">
+
+    </div>
+		</div>
+		<div class="form-group">
+			<label>Name:</label><br><input type="text" name="D" value="{{name}}" placeholder="Your Answer">
+		</div>
+		<div class="form-group">
+			<label>Any thing else you want to specify</label><br><input type="text" name="E" value="{{anything}}" placeholder="Your Answer">
+		</div>
+<div class="form-group">
+			<label>How comfortable are you with sharing your fitness information (in social media or focus groups)</label><br>
+			
+			<div class="radio">
+      <label><input type="radio" value="Not comfortable at all" name="F">Not comfortable at all</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="Open to sharing some of it" name="F">Open to sharing some of it</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" value="Totally comfortable
+SUBMIT
+" name="F">Totally comfortable
+</label>
+    </div>
+    
+    
+    
+		</div>	
+		<button type="submit">Submit</button>		
+	</form>
+
+</div>
+</div>
+</div>
+</body>
+<script>
+  angular.module('contactForm', [])
+    .controller('ContactController', ['$scope', function($scope) {
+      
+      $scope.gender ='',
+      $scope.life_style="";
+      $scope.name="";
+      $scope.anything=""
+    }]);
+</script>
+</html>
